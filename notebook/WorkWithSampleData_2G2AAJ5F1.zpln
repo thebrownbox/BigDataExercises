@@ -4,7 +4,7 @@
       "title": "Check PySpark version",
       "text": "%spark.pyspark\nimport numpy as np\nimport pandas as pd\nfrom pyspark.sql.functions import count\n\nprint(\u0027Spark verion:\u0027, sc.version)",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 09:57:07.068",
+      "dateUpdated": "2021-03-17 09:58:30.954",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -39,15 +39,15 @@
       "jobName": "paragraph_1615956166370_373044043",
       "id": "paragraph_1615956166370_373044043",
       "dateCreated": "2021-03-17 04:42:46.370",
-      "dateStarted": "2021-03-17 09:57:07.088",
-      "dateFinished": "2021-03-17 09:57:07.312",
+      "dateStarted": "2021-03-17 09:58:30.974",
+      "dateFinished": "2021-03-17 09:58:31.199",
       "status": "FINISHED"
     },
     {
       "title": "Check data file content",
       "text": "%spark.pyspark\nDATA_FILE_PATH \u003d \u0027../../data/SampleData.csv\u0027\nTEXT_FILE_PATH \u003d \u0027../../data/SampleTextFile.txt\u0027\nprint(\u0027Data File Path: \u0027, DATA_FILE_PATH)\nprint(\u0027Text File Path: \u0027, TEXT_FILE_PATH)\n",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 09:57:07.388",
+      "dateUpdated": "2021-03-17 09:58:31.273",
       "progress": 0,
       "config": {
         "tableHide": false,
@@ -84,15 +84,15 @@
       "jobName": "paragraph_1615963428545_849077494",
       "id": "paragraph_1615963428545_849077494",
       "dateCreated": "2021-03-17 06:43:48.545",
-      "dateStarted": "2021-03-17 09:57:07.409",
-      "dateFinished": "2021-03-17 09:57:07.633",
+      "dateStarted": "2021-03-17 09:58:31.293",
+      "dateFinished": "2021-03-17 09:58:31.530",
       "status": "FINISHED"
     },
     {
       "title": "Some test code",
       "text": "%spark.pyspark\nlines \u003d spark.read.text(TEXT_FILE_PATH)\nfiltered \u003d lines.filter(lines.value.contains(\"Spark\"))\nfiltered.count()",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 09:57:07.708",
+      "dateUpdated": "2021-03-17 09:58:31.593",
       "progress": 100,
       "config": {
         "editorSetting": {
@@ -130,7 +130,7 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d203"
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d208"
             }
           ],
           "interpreterSettingId": "spark"
@@ -140,16 +140,16 @@
       "jobName": "paragraph_1615963437725_297844356",
       "id": "paragraph_1615963437725_297844356",
       "dateCreated": "2021-03-17 06:43:57.725",
-      "dateStarted": "2021-03-17 09:57:07.731",
-      "dateFinished": "2021-03-17 09:57:08.105",
+      "dateStarted": "2021-03-17 09:58:31.614",
+      "dateFinished": "2021-03-17 09:58:31.992",
       "status": "FINISHED"
     },
     {
       "title": "Read Data File",
       "text": "%spark.pyspark\ndata_df \u003d spark.read.options(header\u003dTrue, inferSchema\u003dTrue, multiline\u003dTrue, quote\u003d\u0027\"\u0027, escape\u003d\u0027\"\u0027).csv(DATA_FILE_PATH)\ndata_df.count()\n# # data_df.show(vertical\u003dTrue)\n# z.show(data_df)\n",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 09:57:08.130",
-      "progress": 50,
+      "dateUpdated": "2021-03-17 09:58:32.013",
+      "progress": 0,
       "config": {
         "editorSetting": {
           "language": "python",
@@ -240,13 +240,13 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d204"
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d209"
             },
             {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d205"
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d210"
             },
             {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d206"
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d211"
             }
           ],
           "interpreterSettingId": "spark"
@@ -256,15 +256,15 @@
       "jobName": "paragraph_1615964036098_1102504033",
       "id": "paragraph_1615964036098_1102504033",
       "dateCreated": "2021-03-17 06:53:56.098",
-      "dateStarted": "2021-03-17 09:57:08.150",
-      "dateFinished": "2021-03-17 09:57:09.177",
+      "dateStarted": "2021-03-17 09:58:32.033",
+      "dateFinished": "2021-03-17 09:58:33.209",
       "status": "FINISHED"
     },
     {
       "title": "Data Validation",
       "text": "%spark.pyspark\nsources \u003d [\"\", \"\", \"\"]",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 09:57:09.250",
+      "dateUpdated": "2021-03-17 09:58:33.234",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -294,16 +294,16 @@
       "jobName": "paragraph_1615974760613_1373955112",
       "id": "paragraph_1615974760613_1373955112",
       "dateCreated": "2021-03-17 09:52:40.614",
-      "dateStarted": "2021-03-17 09:57:09.269",
-      "dateFinished": "2021-03-17 09:57:09.490",
+      "dateStarted": "2021-03-17 09:58:33.253",
+      "dateFinished": "2021-03-17 09:58:33.471",
       "status": "FINISHED"
     },
     {
-      "title": "Do some sample query code on a data frame",
+      "title": "Do some simple query on a data frame",
       "text": "%spark.pyspark\nsource_df \u003d (data_df.select(\"organization\")\n                    .groupBy(\"organization\")\n                    .agg(count(\"organization\").alias(\"Total\"))\n                    .orderBy(\"Total\", ascending\u003dFalse))\nz.show(source_df)",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 09:57:09.568",
-      "progress": 100,
+      "dateUpdated": "2021-03-17 09:58:33.551",
+      "progress": 0,
       "config": {
         "editorSetting": {
           "language": "python",
@@ -403,7 +403,7 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d207"
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d212"
             }
           ],
           "interpreterSettingId": "spark"
@@ -413,21 +413,27 @@
       "jobName": "paragraph_1615964386203_189144921",
       "id": "paragraph_1615964386203_189144921",
       "dateCreated": "2021-03-17 06:59:46.203",
-      "dateStarted": "2021-03-17 09:57:09.587",
-      "dateFinished": "2021-03-17 09:57:10.622",
+      "dateStarted": "2021-03-17 09:58:33.582",
+      "dateFinished": "2021-03-17 09:58:34.566",
       "status": "FINISHED"
     },
     {
       "text": "%spark.pyspark\n",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 09:57:10.692",
+      "dateUpdated": "2021-03-17 09:58:34.580",
       "progress": 0,
       "config": {
         "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
         "fontSize": 9.0,
         "results": {},
         "enabled": true,
-        "editorSetting": {}
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        }
       },
       "settings": {
         "params": {},
@@ -443,8 +449,8 @@
       "jobName": "paragraph_1615972252710_1553738769",
       "id": "paragraph_1615972252710_1553738769",
       "dateCreated": "2021-03-17 09:10:52.713",
-      "dateStarted": "2021-03-17 09:57:10.705",
-      "dateFinished": "2021-03-17 09:57:10.925",
+      "dateStarted": "2021-03-17 09:58:34.597",
+      "dateFinished": "2021-03-17 09:58:34.814",
       "status": "FINISHED"
     }
   ],
