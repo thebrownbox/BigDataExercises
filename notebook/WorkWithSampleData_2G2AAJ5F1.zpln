@@ -2,9 +2,9 @@
   "paragraphs": [
     {
       "title": "Check PySpark version",
-      "text": "%spark.pyspark\nimport numpy as np\nimport pandas as pd\nprint(\u0027Spark verion:\u0027, sc.version)",
+      "text": "%spark.pyspark\nimport numpy as np\nimport pandas as pd\nfrom pyspark.sql.functions import count\n\nprint(\u0027Spark verion:\u0027, sc.version)",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 08:18:38.475",
+      "dateUpdated": "2021-03-17 09:57:07.068",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -39,15 +39,15 @@
       "jobName": "paragraph_1615956166370_373044043",
       "id": "paragraph_1615956166370_373044043",
       "dateCreated": "2021-03-17 04:42:46.370",
-      "dateStarted": "2021-03-17 08:18:38.498",
-      "dateFinished": "2021-03-17 08:18:38.730",
+      "dateStarted": "2021-03-17 09:57:07.088",
+      "dateFinished": "2021-03-17 09:57:07.312",
       "status": "FINISHED"
     },
     {
       "title": "Check data file content",
       "text": "%spark.pyspark\nDATA_FILE_PATH \u003d \u0027../../data/SampleData.csv\u0027\nTEXT_FILE_PATH \u003d \u0027../../data/SampleTextFile.txt\u0027\nprint(\u0027Data File Path: \u0027, DATA_FILE_PATH)\nprint(\u0027Text File Path: \u0027, TEXT_FILE_PATH)\n",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 07:47:50.479",
+      "dateUpdated": "2021-03-17 09:57:07.388",
       "progress": 0,
       "config": {
         "tableHide": false,
@@ -84,15 +84,15 @@
       "jobName": "paragraph_1615963428545_849077494",
       "id": "paragraph_1615963428545_849077494",
       "dateCreated": "2021-03-17 06:43:48.545",
-      "dateStarted": "2021-03-17 07:47:50.502",
-      "dateFinished": "2021-03-17 07:47:50.736",
+      "dateStarted": "2021-03-17 09:57:07.409",
+      "dateFinished": "2021-03-17 09:57:07.633",
       "status": "FINISHED"
     },
     {
       "title": "Some test code",
       "text": "%spark.pyspark\nlines \u003d spark.read.text(TEXT_FILE_PATH)\nfiltered \u003d lines.filter(lines.value.contains(\"Spark\"))\nfiltered.count()",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 07:47:50.802",
+      "dateUpdated": "2021-03-17 09:57:07.708",
       "progress": 100,
       "config": {
         "editorSetting": {
@@ -130,7 +130,7 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d8"
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d203"
             }
           ],
           "interpreterSettingId": "spark"
@@ -140,16 +140,16 @@
       "jobName": "paragraph_1615963437725_297844356",
       "id": "paragraph_1615963437725_297844356",
       "dateCreated": "2021-03-17 06:43:57.725",
-      "dateStarted": "2021-03-17 07:47:50.824",
-      "dateFinished": "2021-03-17 07:47:51.255",
+      "dateStarted": "2021-03-17 09:57:07.731",
+      "dateFinished": "2021-03-17 09:57:08.105",
       "status": "FINISHED"
     },
     {
       "title": "Read Data File",
-      "text": "%spark.pyspark\n# Read the file into a Spark DataFrame using the CSV\n# format by inferring the schema and specifying that the\n# file contains a header, which provides column names for comma-\n# separated fields.\ndata_df \u003d spark.read.options(header\u003dTrue, inferSchema\u003dTrue,quotes\u003d\",\").csv(DATA_FILE_PATH)\ndata_df.count()\n# data_df.show(vertical\u003dTrue)\n\n# help(data_df.show)",
+      "text": "%spark.pyspark\ndata_df \u003d spark.read.options(header\u003dTrue, inferSchema\u003dTrue, multiline\u003dTrue, quote\u003d\u0027\"\u0027, escape\u003d\u0027\"\u0027).csv(DATA_FILE_PATH)\ndata_df.count()\n# # data_df.show(vertical\u003dTrue)\n# z.show(data_df)\n",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 08:42:20.580",
-      "progress": 100,
+      "dateUpdated": "2021-03-17 09:57:08.130",
+      "progress": 50,
       "config": {
         "editorSetting": {
           "language": "python",
@@ -161,9 +161,62 @@
         "editorMode": "ace/mode/python",
         "fontSize": 9.0,
         "title": true,
-        "results": {},
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 171.45,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "_id": "string",
+                      "headline": "string",
+                      "thumbnail": "string",
+                      "description": "string",
+                      "type": "string",
+                      "date_published": "string",
+                      "date_modified": "string",
+                      "author.@type": "string",
+                      "author.name": "string",
+                      "publisher": "string",
+                      "content": "string",
+                      "images": "string",
+                      "keywords": "string",
+                      "category": "string",
+                      "language": "string",
+                      "geo_place_name": "string",
+                      "geo_region": "string",
+                      "geo_position": "string",
+                      "word_count": "string",
+                      "url": "string",
+                      "like": "string",
+                      "share": "string",
+                      "seen": "string",
+                      "organization": "string",
+                      "related_urls\r": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
         "enabled": true,
-        "lineNumbers": false
+        "lineNumbers": false,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -174,7 +227,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "1277"
+            "data": "1256"
           }
         ]
       },
@@ -187,13 +240,13 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d76"
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d204"
             },
             {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d77"
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d205"
             },
             {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d78"
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d206"
             }
           ],
           "interpreterSettingId": "spark"
@@ -203,15 +256,15 @@
       "jobName": "paragraph_1615964036098_1102504033",
       "id": "paragraph_1615964036098_1102504033",
       "dateCreated": "2021-03-17 06:53:56.098",
-      "dateStarted": "2021-03-17 08:42:20.614",
-      "dateFinished": "2021-03-17 08:42:21.602",
+      "dateStarted": "2021-03-17 09:57:08.150",
+      "dateFinished": "2021-03-17 09:57:09.177",
       "status": "FINISHED"
     },
     {
-      "title": "Do some sample query code on a data frame",
-      "text": "%spark.pyspark\ndata_source_df \u003d data_df.select(\"organization\")\nprint(data_source_df.count())\ndata_source_df.show(10)",
+      "title": "Data Validation",
+      "text": "%spark.pyspark\nsources \u003d [\"\", \"\", \"\"]",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 08:42:39.963",
+      "dateUpdated": "2021-03-17 09:57:09.250",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -233,10 +286,111 @@
       },
       "results": {
         "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1615974760613_1373955112",
+      "id": "paragraph_1615974760613_1373955112",
+      "dateCreated": "2021-03-17 09:52:40.614",
+      "dateStarted": "2021-03-17 09:57:09.269",
+      "dateFinished": "2021-03-17 09:57:09.490",
+      "status": "FINISHED"
+    },
+    {
+      "title": "Do some sample query code on a data frame",
+      "text": "%spark.pyspark\nsource_df \u003d (data_df.select(\"organization\")\n                    .groupBy(\"organization\")\n                    .agg(count(\"organization\").alias(\"Total\"))\n                    .orderBy(\"Total\", ascending\u003dFalse))\nz.show(source_df)",
+      "user": "anonymous",
+      "dateUpdated": "2021-03-17 09:57:09.568",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "title": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "organization": "string",
+                      "Total": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "organization",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "Total",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
         "msg": [
           {
-            "type": "TEXT",
-            "data": "1277\n+--------------------+\n|        organization|\n+--------------------+\n|                 24h|\n|             Afamily|\n|             Afamily|\n|             Afamily|\n|             Afamily|\n|             Afamily|\n|             Afamily|\n| phục hồi lớp màn...|\n|             Afamily|\n| sang chảnh hơn h...|\n+--------------------+\nonly showing top 10 rows\n\n"
+            "type": "TABLE",
+            "data": "organization\tTotal\n24h\t358\nVNExpress\t340\nAfamily\t206\nThanhNien\t183\nLaoDong\t136\nDanTri\t33\n"
           }
         ]
       },
@@ -249,10 +403,7 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d79"
-            },
-            {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d80"
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d207"
             }
           ],
           "interpreterSettingId": "spark"
@@ -262,20 +413,20 @@
       "jobName": "paragraph_1615964386203_189144921",
       "id": "paragraph_1615964386203_189144921",
       "dateCreated": "2021-03-17 06:59:46.203",
-      "dateStarted": "2021-03-17 08:42:39.987",
-      "dateFinished": "2021-03-17 08:42:40.524",
+      "dateStarted": "2021-03-17 09:57:09.587",
+      "dateFinished": "2021-03-17 09:57:10.622",
       "status": "FINISHED"
     },
     {
-      "text": "%spark.pyspark\ndf \u003d pd.",
+      "text": "%spark.pyspark\n",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 08:18:59.873",
+      "dateUpdated": "2021-03-17 09:57:10.692",
       "progress": 0,
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
-        "enabled": true,
         "results": {},
+        "enabled": true,
         "editorSetting": {}
       },
       "settings": {
@@ -289,11 +440,11 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1615964398982_1150865652",
-      "id": "paragraph_1615964398982_1150865652",
-      "dateCreated": "2021-03-17 06:59:58.982",
-      "dateStarted": "2021-03-17 07:44:41.421",
-      "dateFinished": "2021-03-17 07:44:41.651",
+      "jobName": "paragraph_1615972252710_1553738769",
+      "id": "paragraph_1615972252710_1553738769",
+      "dateCreated": "2021-03-17 09:10:52.713",
+      "dateStarted": "2021-03-17 09:57:10.705",
+      "dateFinished": "2021-03-17 09:57:10.925",
       "status": "FINISHED"
     }
   ],
@@ -308,6 +459,6 @@
     "isZeppelinNotebookCronEnable": false
   },
   "info": {
-    "isRunning": false
+    "isRunning": true
   }
 }
