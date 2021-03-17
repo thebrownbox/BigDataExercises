@@ -2,9 +2,9 @@
   "paragraphs": [
     {
       "title": "Check PySpark version",
-      "text": "%spark.pyspark\nprint(\u0027Spark verion:\u0027, sc.version)",
+      "text": "%spark.pyspark\nimport numpy as np\nimport pandas as pd\nprint(\u0027Spark verion:\u0027, sc.version)",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 07:44:38.566",
+      "dateUpdated": "2021-03-17 08:18:38.475",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -39,15 +39,15 @@
       "jobName": "paragraph_1615956166370_373044043",
       "id": "paragraph_1615956166370_373044043",
       "dateCreated": "2021-03-17 04:42:46.370",
-      "dateStarted": "2021-03-17 07:44:38.588",
-      "dateFinished": "2021-03-17 07:44:38.825",
+      "dateStarted": "2021-03-17 08:18:38.498",
+      "dateFinished": "2021-03-17 08:18:38.730",
       "status": "FINISHED"
     },
     {
       "title": "Check data file content",
       "text": "%spark.pyspark\nDATA_FILE_PATH \u003d \u0027../../data/SampleData.csv\u0027\nTEXT_FILE_PATH \u003d \u0027../../data/SampleTextFile.txt\u0027\nprint(\u0027Data File Path: \u0027, DATA_FILE_PATH)\nprint(\u0027Text File Path: \u0027, TEXT_FILE_PATH)\n",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 07:44:38.887",
+      "dateUpdated": "2021-03-17 07:47:50.479",
       "progress": 0,
       "config": {
         "tableHide": false,
@@ -84,15 +84,15 @@
       "jobName": "paragraph_1615963428545_849077494",
       "id": "paragraph_1615963428545_849077494",
       "dateCreated": "2021-03-17 06:43:48.545",
-      "dateStarted": "2021-03-17 07:44:38.905",
-      "dateFinished": "2021-03-17 07:44:39.144",
+      "dateStarted": "2021-03-17 07:47:50.502",
+      "dateFinished": "2021-03-17 07:47:50.736",
       "status": "FINISHED"
     },
     {
       "title": "Some test code",
       "text": "%spark.pyspark\nlines \u003d spark.read.text(TEXT_FILE_PATH)\nfiltered \u003d lines.filter(lines.value.contains(\"Spark\"))\nfiltered.count()",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 07:44:39.205",
+      "dateUpdated": "2021-03-17 07:47:50.802",
       "progress": 100,
       "config": {
         "editorSetting": {
@@ -130,7 +130,7 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d4"
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d8"
             }
           ],
           "interpreterSettingId": "spark"
@@ -140,15 +140,15 @@
       "jobName": "paragraph_1615963437725_297844356",
       "id": "paragraph_1615963437725_297844356",
       "dateCreated": "2021-03-17 06:43:57.725",
-      "dateStarted": "2021-03-17 07:44:39.224",
-      "dateFinished": "2021-03-17 07:44:39.658",
+      "dateStarted": "2021-03-17 07:47:50.824",
+      "dateFinished": "2021-03-17 07:47:51.255",
       "status": "FINISHED"
     },
     {
       "title": "Read Data File",
-      "text": "%spark.pyspark\n# Read the file into a Spark DataFrame using the CSV\n# format by inferring the schema and specifying that the\n# file contains a header, which provides column names for comma-\n# separated fields.\ndata_df \u003d spark.read.format(\"csv\").option(\"header\",\"true\").option(\"inferSchema\",\"true\").load(DATA_FILE_PATH)\ndata_df.count()",
+      "text": "%spark.pyspark\n# Read the file into a Spark DataFrame using the CSV\n# format by inferring the schema and specifying that the\n# file contains a header, which provides column names for comma-\n# separated fields.\ndata_df \u003d spark.read.options(header\u003dTrue, inferSchema\u003dTrue,quotes\u003d\",\").csv(DATA_FILE_PATH)\ndata_df.count()\n# data_df.show(vertical\u003dTrue)\n\n# help(data_df.show)",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 07:44:39.724",
+      "dateUpdated": "2021-03-17 08:42:20.580",
       "progress": 100,
       "config": {
         "editorSetting": {
@@ -162,7 +162,8 @@
         "fontSize": 9.0,
         "title": true,
         "results": {},
-        "enabled": true
+        "enabled": true,
+        "lineNumbers": false
       },
       "settings": {
         "params": {},
@@ -186,13 +187,13 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d5"
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d76"
             },
             {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d6"
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d77"
             },
             {
-              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d7"
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d78"
             }
           ],
           "interpreterSettingId": "spark"
@@ -202,15 +203,15 @@
       "jobName": "paragraph_1615964036098_1102504033",
       "id": "paragraph_1615964036098_1102504033",
       "dateCreated": "2021-03-17 06:53:56.098",
-      "dateStarted": "2021-03-17 07:44:39.743",
-      "dateFinished": "2021-03-17 07:44:40.741",
+      "dateStarted": "2021-03-17 08:42:20.614",
+      "dateFinished": "2021-03-17 08:42:21.602",
       "status": "FINISHED"
     },
     {
       "title": "Do some sample query code on a data frame",
-      "text": "%spark.pyspark\ndata_df.select(\"\")",
+      "text": "%spark.pyspark\ndata_source_df \u003d data_df.select(\"organization\")\nprint(data_source_df.count())\ndata_source_df.show(10)",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 07:44:54.989",
+      "dateUpdated": "2021-03-17 08:42:39.963",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -232,22 +233,43 @@
       },
       "results": {
         "code": "SUCCESS",
-        "msg": []
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "1277\n+--------------------+\n|        organization|\n+--------------------+\n|                 24h|\n|             Afamily|\n|             Afamily|\n|             Afamily|\n|             Afamily|\n|             Afamily|\n|             Afamily|\n| phục hồi lớp màn...|\n|             Afamily|\n| sang chảnh hơn h...|\n+--------------------+\nonly showing top 10 rows\n\n"
+          }
+        ]
       },
       "apps": [],
-      "runtimeInfos": {},
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d79"
+            },
+            {
+              "jobUrl": "http://abed0f2d111f:4040/jobs/job?id\u003d80"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1615964386203_189144921",
       "id": "paragraph_1615964386203_189144921",
       "dateCreated": "2021-03-17 06:59:46.203",
-      "dateStarted": "2021-03-17 07:44:40.781",
-      "dateFinished": "2021-03-17 07:44:41.012",
+      "dateStarted": "2021-03-17 08:42:39.987",
+      "dateFinished": "2021-03-17 08:42:40.524",
       "status": "FINISHED"
     },
     {
-      "text": "%spark.pyspark\n",
+      "text": "%spark.pyspark\ndf \u003d pd.",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 07:44:41.398",
+      "dateUpdated": "2021-03-17 08:18:59.873",
       "progress": 0,
       "config": {
         "colWidth": 12.0,
