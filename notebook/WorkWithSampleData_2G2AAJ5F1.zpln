@@ -1,18 +1,19 @@
 {
   "paragraphs": [
     {
-      "text": "%sh\nls",
+      "text": "%spark.pyspark\nDATA_PATH \u003d \u0027../../notebook/SampleData.csv\u0027\nprint(\u0027Data Path: \u0027, DATA_PATH)\nprint(\u0027PySpark verion:\u0027, sc.version)",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 04:24:11.753",
+      "dateUpdated": "2021-03-17 05:05:07.399",
       "progress": 0,
       "config": {
         "editorSetting": {
-          "language": "sh",
+          "language": "python",
           "editOnDblClick": false,
-          "completionSupport": false
+          "completionSupport": true,
+          "completionKey": "TAB"
         },
         "colWidth": 12.0,
-        "editorMode": "ace/mode/sh",
+        "editorMode": "ace/mode/python",
         "fontSize": 9.0,
         "results": {},
         "enabled": true
@@ -26,24 +27,24 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "bin\nconf\ninterpreter\nk8s\nlib\nLICENSE\nlicenses\nlogs\nnotebook\nNOTICE\nplugins\nREADME.md\nrun\nwebapps\nzeppelin-web-0.9.0.war\nzeppelin-web-angular-0.9.0.war\n"
+            "data": "Data Path:  ../../notebook/SampleData.csv\nPySpark verion: 2.4.5\n"
           }
         ]
       },
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1615955042287_998931399",
-      "id": "paragraph_1615955042287_998931399",
-      "dateCreated": "2021-03-17 04:24:02.287",
-      "dateStarted": "2021-03-17 04:24:11.790",
-      "dateFinished": "2021-03-17 04:24:13.932",
+      "jobName": "paragraph_1615956166370_373044043",
+      "id": "paragraph_1615956166370_373044043",
+      "dateCreated": "2021-03-17 04:42:46.370",
+      "dateStarted": "2021-03-17 05:05:07.423",
+      "dateFinished": "2021-03-17 05:05:07.662",
       "status": "FINISHED"
     },
     {
-      "text": "%sh\n",
+      "text": "%spark.pyspark\n",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 04:24:11.787",
+      "dateUpdated": "2021-03-17 05:05:57.214",
       "progress": 0,
       "config": {},
       "settings": {
@@ -53,14 +54,14 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1615955051787_1646049641",
-      "id": "paragraph_1615955051787_1646049641",
-      "dateCreated": "2021-03-17 04:24:11.787",
+      "jobName": "paragraph_1615957557214_1576342110",
+      "id": "paragraph_1615957557214_1576342110",
+      "dateCreated": "2021-03-17 05:05:57.214",
       "status": "READY"
     }
   ],
-  "name": "TestWithSampleData",
-  "id": "2G3XBRE1D",
+  "name": "WorkWithSampleData",
+  "id": "2G2AAJ5F1",
   "defaultInterpreterGroup": "python",
   "version": "0.9.0",
   "noteParams": {},
