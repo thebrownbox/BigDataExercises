@@ -1,0 +1,61 @@
+Phần 1: Chốt data
+
+1. Cấu trúc ok
+
+2. Tnguồn báo:
+
+1. DanTri
+2. VnExpress
+3. Vietnam Net
+4. Kenh 14
+5. 24h
+6. LaoDong
+7. tuoi Tre
+8. ThanhNien
+
+----------------------------
+Lấy bao nhiêu => Nguyên quyết định
+=> Chốt final => tRong tuần sau 
+
+----------------------------
+Phần 2: Thảo kỹ thuật
+
+1. Overview về data đã get được.
+- Thời thời gian
+- Theo nguồn
+- Số lượng
+
+===================================================================
+A. Những thông tin gì có thể suy ra được luôn, mà không cần suy diễn:
+=> Một số kết luận ngắn gọn, điểm đặc biệt:
+
+Công:
+1. Bài báo nào nhiều tương tác: like + share + seen. 
+
+
+===================================================================
+B. Cần suy ndieen
+1. Nhất: Muốn tìm xem trang web nào thiên dưa tin về mảng nào?
+
+2. Nguyên: Muốn tìm thông tin nào xuất hiện nhiều nhất.
+
+--- Đếm những từ mà mình quan tâm xem có thể hiện thông tin gì ko?
+3. Đếm từ: 
++) COVID, bitcoin, vàng, usd,... tình yêu, sơn tùng, MTP, MV, tù
+
+4) Nhất: So sánh số lượng từ xuất nhiện nhiều nhất ở mỗi nguồn.
+
+5) Muốn xác định xem (title) các báo có trùng lặp nhiều hay không...
+
+6) Xác định độ ảnh hưởng / nổi / hót / quan tâm dựa vào comment nếu có
+
+
+======================================
+
+
+1. Kết thúc lấy data => Chôts data
+2. Thực hành trên data sample với task của mình
+Nguyên: B2
+Công: A, B3
+
+=====================================
