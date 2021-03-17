@@ -1,5 +1,6 @@
 # BigDataExercises
 
+## How to run
 1. To run zeppelin: (Windows PowerShell)
 
 ```docker run -p 8080:8080 --rm -v $PWD/data:/data -v $PWD/notebook:/notebook -e ZEPPELIN_DATA_DIR='/data' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.9.0```
@@ -11,7 +12,8 @@
 
 2. Access Zeppelin by go to localhost:8080 in your web browser. </br>
 
-3. Some note when using Zeppelin:
+## Some other notes
+1. Some note when using Zeppelin:
 - "CTRL + ." is auto-complete code.
 
 
