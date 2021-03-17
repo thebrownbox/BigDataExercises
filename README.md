@@ -1,8 +1,17 @@
 # BigDataExercises
 
-1. To run zeppelin: (Windows PowerShell) </br>
-```docker run -p 8080:8080 --rm -v $PWD/logs:/logs -v $PWD/notebook:/notebook -e ZEPPELIN_LOG_DIR='/logs' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.9.0```
+1. To run zeppelin: (Windows PowerShell)
 
-<code> Or: Right click file StartZeppelin.ps1, select "Run with Powershell" </code>
+```docker run -p 8080:8080 --rm -v $PWD/data:/data -v $PWD/notebook:/notebook -e ZEPPELIN_DATA_DIR='/data' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.9.0```
 
-2. Access Zeppelin by: localhost:8080
+```Or: Right click file StartZeppelin.ps1, select "Run with Powershell".```
+
+- data: Folder to stored data files
+- notebook: Folder to store notebook files
+
+2. Access Zeppelin by go to localhost:8080 in your web browser. </br>
+
+3. Some note when using Zeppelin:
+- "CTRL + ." is auto-complete code.
+
+4. Repo of the Book "Learning Spark v2": https://github.com/databricks/LearningSparkV2
