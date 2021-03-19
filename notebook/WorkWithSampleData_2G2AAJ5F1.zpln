@@ -2,9 +2,10 @@
   "paragraphs": [
     {
       "title": "Check PySpark version",
-      "text": "%spark.pyspark\nimport numpy as np\nimport pandas as pd\nfrom pyspark.sql.functions import count\n\nprint(\u0027Spark verion:\u0027, sc.version)",
+      "text": "%spark.pyspark\nimport numpy as np\nimport pandas as pd\nfrom pyspark.sql.functions import *\n\nprint(\u0027Spark verion:\u0027, sc.version)",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 15:45:45.614",
+      "dateUpdated": "2021-03-19 03:09:15.002",
+      "progress": 0,
       "config": {
         "editorSetting": {
           "language": "python",
@@ -38,15 +39,16 @@
       "jobName": "paragraph_1615956166370_373044043",
       "id": "paragraph_1615956166370_373044043",
       "dateCreated": "2021-03-17 04:42:46.370",
-      "dateStarted": "2021-03-17 15:45:45.883",
-      "dateFinished": "2021-03-17 15:46:33.182",
+      "dateStarted": "2021-03-19 03:09:15.022",
+      "dateFinished": "2021-03-19 03:09:15.253",
       "status": "FINISHED"
     },
     {
       "title": "Check data file path",
       "text": "%spark.pyspark\nDATA_FILE_PATH \u003d \u0027../../data/SampleData.csv\u0027\nTEXT_FILE_PATH \u003d \u0027../../data/SampleTextFile.txt\u0027\nprint(\u0027Data File Path: \u0027, DATA_FILE_PATH)\nprint(\u0027Text File Path: \u0027, TEXT_FILE_PATH)\n",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 15:46:33.211",
+      "dateUpdated": "2021-03-19 03:09:15.322",
+      "progress": 0,
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -82,15 +84,16 @@
       "jobName": "paragraph_1615963428545_849077494",
       "id": "paragraph_1615963428545_849077494",
       "dateCreated": "2021-03-17 06:43:48.545",
-      "dateStarted": "2021-03-17 15:46:33.427",
-      "dateFinished": "2021-03-17 15:46:33.908",
+      "dateStarted": "2021-03-19 03:09:15.346",
+      "dateFinished": "2021-03-19 03:09:15.574",
       "status": "FINISHED"
     },
     {
       "title": "Some test code",
       "text": "%spark.pyspark\nlines \u003d spark.read.text(DATA_FILE_PATH)\nfiltered \u003d lines.filter(lines.value.contains(\"Organization\"))\nfiltered.count()",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 15:46:33.930",
+      "dateUpdated": "2021-03-19 03:09:15.646",
+      "progress": 100,
       "config": {
         "editorSetting": {
           "language": "python",
@@ -127,7 +130,7 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://52bbf6fcd6c9:4040/jobs/job?id\u003d0"
+              "jobUrl": "http://99bd300f33af:4040/jobs/job?id\u003d71"
             }
           ],
           "interpreterSettingId": "spark"
@@ -137,15 +140,16 @@
       "jobName": "paragraph_1615963437725_297844356",
       "id": "paragraph_1615963437725_297844356",
       "dateCreated": "2021-03-17 06:43:57.725",
-      "dateStarted": "2021-03-17 15:46:34.084",
-      "dateFinished": "2021-03-17 15:46:45.894",
+      "dateStarted": "2021-03-19 03:09:15.662",
+      "dateFinished": "2021-03-19 03:09:16.086",
       "status": "FINISHED"
     },
     {
       "title": "Read Data File",
-      "text": "%spark.pyspark\ndata_df \u003d spark.read.options(header\u003dTrue, inferSchema\u003dTrue, multiline\u003dTrue, quote\u003d\u0027\"\u0027, escape\u003d\u0027\"\u0027).csv(DATA_FILE_PATH)\ndata_df.count()\n# # data_df.show(vertical\u003dTrue)\n# z.show(data_df)\n",
+      "text": "%spark.pyspark\ndata_df \u003d spark.read.options(header\u003dTrue, inferSchema\u003dTrue, multiline\u003dTrue, quote\u003d\u0027\"\u0027, escape\u003d\u0027\"\u0027).csv(DATA_FILE_PATH)\ndata_df.count()\n# data_df.show(vertical\u003dTrue)\n# z.show(data_df)\nz.show(data_df.limit(3))\n",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 15:46:46.107",
+      "dateUpdated": "2021-03-19 03:09:16.162",
+      "progress": 0,
       "config": {
         "editorSetting": {
           "language": "python",
@@ -161,11 +165,279 @@
           "0": {
             "graph": {
               "mode": "table",
-              "height": 171.45,
+              "height": 197.75,
               "optionOpen": false,
               "setting": {
                 "table": {
-                  "tableGridState": {},
+                  "tableGridState": {
+                    "columns": [
+                      {
+                        "name": "_id0",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "headline1",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "thumbnail2",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "description3",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "type4",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "date_published5",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "date_modified6",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "author.@type7",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "author.name8",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "publisher9",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "content10",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "images11",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "keywords12",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "category13",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "language14",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "geo_place_name15",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "geo_region16",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "geo_position17",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "word_count18",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "url19",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "like20",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "share21",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "seen22",
+                        "visible": true,
+                        "width": 152.0,
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "organization23",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {
+                          "priority": 0.0,
+                          "direction": "desc"
+                        },
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "related_urls\r24",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      }
+                    ],
+                    "scrollFocus": {},
+                    "selection": [],
+                    "grouping": {
+                      "grouping": [],
+                      "aggregations": [],
+                      "rowExpandedStates": {}
+                    },
+                    "treeView": {},
+                    "pagination": {
+                      "paginationCurrentPage": 1.0,
+                      "paginationPageSize": 250.0
+                    }
+                  },
                   "tableColumnTypeState": {
                     "names": {
                       "_id": "string",
@@ -204,15 +476,50 @@
                   },
                   "updated": false,
                   "initialized": false
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
                 }
               },
-              "commonSetting": {}
-            }
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "_id",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "headline",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
           }
         },
         "enabled": true,
         "lineNumbers": false,
-        "tableHide": false
+        "tableHide": false,
+        "editorHide": false
       },
       "settings": {
         "params": {},
@@ -222,8 +529,8 @@
         "code": "SUCCESS",
         "msg": [
           {
-            "type": "TEXT",
-            "data": "1256"
+            "type": "TABLE",
+            "data": "_id\theadline\tthumbnail\tdescription\ttype\tdate_published\tdate_modified\tauthor.@type\tauthor.name\tpublisher\tcontent\timages\tkeywords\tcategory\tlanguage\tgeo_place_name\tgeo_region\tgeo_position\tword_count\turl\tlike\tshare\tseen\torganization\trelated_urls\r\n5f169a76d90ef525721bf986\tNeitzen tranh c\u0026amp;#227;i nảy lửa khi so k\u0026amp;#232; m\u0026amp;#225;i t\u0026amp;#243;c của Seo Ye Ji\t[]\tMàn đổi tóc của Seo Ye Ji đã khiến dân tình phải cân não xem kiểu tóc nào phù hợp hơn.\tArticle\t1594987200\t1594987200\tPerson\tZ\t{\"@type\": \"Organization\", \"name\": \"afamily.vn\", \"logo\": {\"@type\": \"ImageObject\", \"url\": \"https://afamilycdn.com/web_images/new-logo-af.png\", \"width\": 60, \"height\": 60}}\tSeo Ye Ji đang là nữ diễn viên nhận được nhiều chú ý nhờ vai điên nữ trong bộ phim Điên Thì Có Sao. Nếu như ở những tập đầu tiên, cô gắn bó với mái tóc dài sang chảnh thì mới đây cô vừa đổi sang kiểu tóc ngắn trẻ trung tạo sự mới mẻ cho nhân vật.Chính điều này đã vô tình tạo nên màn so kè, thậm chí netizen còn tranh cãi nảy lửa xem cô để tóc ngắn hay tóc dài đẹp hơn. Loạt hình khi Seo Ye Ji để tóc ngắn khi xưa cũng được netizen đào lại để so sánh.Netizen cũng bình luận rôm rả về mái tóc của Seo Ye Ji:\t[{\"url\": \"https://afamilycdn.com/thumb_w/600/150157425591193600/2020/7/17/collage-15949640517001647182211-0-0-500-800-crop-15949640562314976934.jpg\", \"alt\": null, \"width\": \"600\", \"height\": \"315\"}]\tseo ye ji,thời trang,mái tóc,kiểu tóc\tĐẹp\tvi\tnull\tnull\tnull\t118\thttps://afamily.vn/neitzen-tranh-cai-nay-lua-khi-so-ke-mai-toc-cua-seo-ye-ji-nguoi-khen-toc-dai-sang-nguoi-lai-bao-toc-ngan-tre-hon-20200717123451412.chn\t-1\t-1\t-1\t24h\t\"-1\"\n5f169a76d90ef525721bf987\tTwice chuyển sang style makeup đậm: Nữ thần Tzuyu vẫn xinh nhưng hơi \u0026amp;amp;quot;thường\u0026amp;amp;quot;\t[]\tTrong bộ ảnh mới, các mỹ nhân của Twice đổi sang style makeup đậm kiểu Nhật mang đến hình ảnh mới mẻ.\tArticle\t1594967520\t1594967520\tPerson\tZ\t{\"@type\": \"Organization\", \"name\": \"afamily.vn\", \"logo\": {\"@type\": \"ImageObject\", \"url\": \"https://afamilycdn.com/web_images/new-logo-af.png\", \"width\": 60, \"height\": 60}}\tSau khi comeback với ca khúc More \u0026 More, mới đây JYP vừa lên kế hoạch cho 9 cô nàng của Twice phát hành album mới tại Nhật Bản. Để mở đường cho lần tái xuất này, công ty đã tung ra bộ ảnh mới của 9 cô nàng. Không còn trang điểm sương sương kiểu Hàn, lần này họ đổi sang lối trang điểm tươi tắn, rực rỡ như gái Nhật.\t[{\"url\": \"https://afamilycdn.com/thumb_w/600/150157425591193600/2020/7/17/collage-15949597079691793452394-0-0-500-800-crop-15949597173792097268067.jpg\", \"alt\": null, \"width\": \"600\", \"height\": \"315\"}]\tTWICE,sao Hàn,trang điểm\tĐẹp\tvi\tnull\tnull\tnull\t72\thttps://afamily.vn/twice-chuyen-sang-style-makeup-dam-kieu-nhat-nu-than-tzuyu-van-xinh-nhung-hoi-thuong-mo-nhat-hon-ca-dan-my-nhan-khac-2020071711222795.chn\t-1\t-1\t-1\tAfamily\t\"-1\"\n5f169a76d90ef525721bf988\tẢnh tốt nghiệp của idol nữ khi chưa makeup, l\u0026amp;#224;m t\u0026amp;#243;c cầu kỳ: Irene như nữ thần\t[]\tXem lại loạt ảnh thời học sinh của các idol nữ, khi chưa có sự can thiệp của công nghệ makeup, nhiều người sẽ khiến bạn phải bất ngờ.\tArticle\t1595296800\t1595296800\tPerson\tZ\t{\"@type\": \"Organization\", \"name\": \"afamily.vn\", \"logo\": {\"@type\": \"ImageObject\", \"url\": \"https://afamilycdn.com/web_images/new-logo-af.png\", \"width\": 60, \"height\": 60}}\tKhác với những hình ảnh lộng lẫy quen thuộc, thời còn cắp sách đến trường, các idol nữ cũng có diện mạo vô cùng giản dị. Thời điểm đó, họ còn chưa makeup và làm tóc cầu kỳ, vậy nên nhan sắc cũng có phần khác biệt so với hiện tại. Nhìn lại loạt ảnh tốt nghiệp khi xưa của các idol nữ, hẳn khối người sẽ khiến bạn phải bất ngờ.\t[{\"url\": \"https://afamilycdn.com/thumb_w/600/150157425591193600/2020/7/20/jisoo-15952252431891386752368-226-0-1298-2048-crop-15952257431051230812501.jpeg\", \"alt\": null, \"width\": \"600\", \"height\": \"315\"}]\tsao Hàn,trang điểm\tĐẹp\tvi\tnull\tnull\tnull\t72\thttps://afamily.vn/anh-tot-nghiep-cua-idol-nu-khi-chua-makeup-lam-toc-cau-ky-irene-nhu-nu-than-jisoo-lai-khac-qua-khac-20200720131645167.chn\t-1\t-1\t-1\tAfamily\t\"-1\"\n"
           }
         ]
       },
@@ -236,13 +543,16 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://52bbf6fcd6c9:4040/jobs/job?id\u003d1"
+              "jobUrl": "http://99bd300f33af:4040/jobs/job?id\u003d72"
             },
             {
-              "jobUrl": "http://52bbf6fcd6c9:4040/jobs/job?id\u003d2"
+              "jobUrl": "http://99bd300f33af:4040/jobs/job?id\u003d73"
             },
             {
-              "jobUrl": "http://52bbf6fcd6c9:4040/jobs/job?id\u003d3"
+              "jobUrl": "http://99bd300f33af:4040/jobs/job?id\u003d74"
+            },
+            {
+              "jobUrl": "http://99bd300f33af:4040/jobs/job?id\u003d75"
             }
           ],
           "interpreterSettingId": "spark"
@@ -252,15 +562,16 @@
       "jobName": "paragraph_1615964036098_1102504033",
       "id": "paragraph_1615964036098_1102504033",
       "dateCreated": "2021-03-17 06:53:56.098",
-      "dateStarted": "2021-03-17 15:46:46.163",
-      "dateFinished": "2021-03-17 15:46:50.052",
+      "dateStarted": "2021-03-19 03:09:16.179",
+      "dateFinished": "2021-03-19 03:09:17.417",
       "status": "FINISHED"
     },
     {
       "title": "Data Validation",
       "text": "%spark.pyspark\nsources \u003d [\"\", \"\", \"\"]",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 15:46:50.118",
+      "dateUpdated": "2021-03-19 03:09:17.481",
+      "progress": 0,
       "config": {
         "editorSetting": {
           "language": "python",
@@ -289,15 +600,16 @@
       "jobName": "paragraph_1615974760613_1373955112",
       "id": "paragraph_1615974760613_1373955112",
       "dateCreated": "2021-03-17 09:52:40.614",
-      "dateStarted": "2021-03-17 15:46:50.251",
-      "dateFinished": "2021-03-17 15:46:50.529",
+      "dateStarted": "2021-03-19 03:09:17.497",
+      "dateFinished": "2021-03-19 03:09:17.721",
       "status": "FINISHED"
     },
     {
       "title": "Do some simple query on a data frame",
       "text": "%spark.pyspark\nsource_df \u003d (data_df.select(\"organization\")\n                    .groupBy(\"organization\")\n                    .agg(count(\"organization\").alias(\"Total\"))\n                    .orderBy(\"Total\", ascending\u003dFalse))\nz.show(source_df)",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 15:47:17.826",
+      "dateUpdated": "2021-03-19 03:09:17.796",
+      "progress": 58,
       "config": {
         "editorSetting": {
           "language": "python",
@@ -397,7 +709,7 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://52bbf6fcd6c9:4040/jobs/job?id\u003d4"
+              "jobUrl": "http://99bd300f33af:4040/jobs/job?id\u003d76"
             }
           ],
           "interpreterSettingId": "spark"
@@ -407,14 +719,83 @@
       "jobName": "paragraph_1615964386203_189144921",
       "id": "paragraph_1615964386203_189144921",
       "dateCreated": "2021-03-17 06:59:46.203",
-      "dateStarted": "2021-03-17 15:46:50.670",
-      "dateFinished": "2021-03-17 15:46:59.260",
+      "dateStarted": "2021-03-19 03:09:17.815",
+      "dateFinished": "2021-03-19 03:09:18.905",
+      "status": "FINISHED"
+    },
+    {
+      "title": "Practice more on data",
+      "text": "%spark.pyspark\n# show all article from DanTri",
+      "user": "anonymous",
+      "dateUpdated": "2021-03-19 03:09:18.915",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "_id": "string",
+                      "headline": "string",
+                      "organization": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true,
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1615972252710_1553738769",
+      "id": "paragraph_1615972252710_1553738769",
+      "dateCreated": "2021-03-17 09:10:52.713",
+      "dateStarted": "2021-03-19 03:09:18.940",
+      "dateFinished": "2021-03-19 03:09:19.170",
       "status": "FINISHED"
     },
     {
       "text": "%spark.pyspark\n",
       "user": "anonymous",
-      "dateUpdated": "2021-03-17 15:46:59.342",
+      "dateUpdated": "2021-03-19 03:09:19.239",
+      "progress": 0,
       "config": {
         "colWidth": 12.0,
         "editorMode": "ace/mode/python",
@@ -439,11 +820,11 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1615972252710_1553738769",
-      "id": "paragraph_1615972252710_1553738769",
-      "dateCreated": "2021-03-17 09:10:52.713",
-      "dateStarted": "2021-03-17 10:04:33.380",
-      "dateFinished": "2021-03-17 10:04:33.600",
+      "jobName": "paragraph_1616119607698_1734141164",
+      "id": "paragraph_1616119607698_1734141164",
+      "dateCreated": "2021-03-19 02:06:47.698",
+      "dateStarted": "2021-03-19 03:09:19.259",
+      "dateFinished": "2021-03-19 03:09:19.482",
       "status": "FINISHED"
     }
   ],
@@ -458,6 +839,6 @@
     "isZeppelinNotebookCronEnable": false
   },
   "info": {
-    "isRunning": false
+    "isRunning": true
   }
 }
