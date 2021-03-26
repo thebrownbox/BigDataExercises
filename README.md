@@ -6,7 +6,7 @@ Run bellow command in the current folder!
 
 ```docker run -p 8080:8080 --rm -v $PWD/data:/data -v $PWD/notebook:/notebook -e ZEPPELIN_DATA_DIR='/data' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.9.0```
 
-```Or: Right click file StartZeppelin.ps1, select "Run with Powershell".```
+```Or (Windows only): Right click file StartZeppelin.ps1, select "Run with Powershell".```
 
 - data: Folder to stored data files
 - notebook: Folder to store notebook files
