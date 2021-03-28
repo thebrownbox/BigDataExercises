@@ -1,16 +1,12 @@
-%spark.pyspark
-temp1 = (data_df.where(data_df.organization == '24h')
-                    .groupBy("category")
-                    .agg(F.count("headline").alias("Total"))
-                    .orderBy("Total", ascending=False))
-z.show(temp1)
-temp2 = (data_df.where(data_df.organization == 'ThanhNien')
-                    .groupBy("category")
-                    .agg(F.count("headline").alias("Total"))
-                    .orderBy("Total", ascending=False))
-z.show(temp2)
-temp3 = (data_df.where(data_df.organization == 'Afamily')
-                    .groupBy("category")
-                    .agg(F.count("headline").alias("Total"))
-                    .orderBy("Total", ascending=False))
-z.show(temp3)
+
+def reformatDate(date):
+    arr = date.split('/')
+    if(len(arr) == 3):
+        if len(arr[2]) < 4:
+            return arr[0]+'/'+arr[1]+'/20'+arr[2]
+    else:
+        return "1/1/1970"
+    return date
+
+print(reformatDate("12/3/21"))
+print(reformatDate("12/3/2021"))
