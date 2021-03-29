@@ -4,7 +4,7 @@
       "title": "Check PySpark version",
       "text": "%spark.pyspark\nimport pyspark.sql.functions as F\nimport pyspark.sql.types as T\n\nprint(\u0027Spark verion:\u0027, sc.version)",
       "user": "anonymous",
-      "dateUpdated": "2021-03-29 01:09:14.952",
+      "dateUpdated": "2021-03-29 01:59:22.556",
       "config": {
         "editorSetting": {
           "language": "python",
@@ -38,15 +38,15 @@
       "jobName": "paragraph_1615956166370_373044043",
       "id": "paragraph_1615956166370_373044043",
       "dateCreated": "2021-03-17 04:42:46.370",
-      "dateStarted": "2021-03-29 01:09:15.110",
-      "dateFinished": "2021-03-29 01:09:52.286",
+      "dateStarted": "2021-03-29 01:59:22.772",
+      "dateFinished": "2021-03-29 02:00:43.220",
       "status": "FINISHED"
     },
     {
       "title": "Check data file path",
       "text": "%spark.pyspark\nDATA_24h_PATH \u003d \u0027../../data/24h.csv\u0027\nDATA_VNEXPRESS_PATH \u003d \u0027../../data/vnexpress.csv\u0027\nDATA_VIETNAMNET_PATH \u003d \u0027../../data/vietnamnet.csv\u0027",
       "user": "anonymous",
-      "dateUpdated": "2021-03-29 01:09:58.697",
+      "dateUpdated": "2021-03-29 02:00:47.746",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -77,15 +77,15 @@
       "jobName": "paragraph_1615963428545_849077494",
       "id": "paragraph_1615963428545_849077494",
       "dateCreated": "2021-03-17 06:43:48.545",
-      "dateStarted": "2021-03-29 01:09:58.767",
-      "dateFinished": "2021-03-29 01:09:59.167",
+      "dateStarted": "2021-03-29 02:00:47.834",
+      "dateFinished": "2021-03-29 02:00:48.270",
       "status": "FINISHED"
     },
     {
       "title": "Load Data: 24h",
       "text": "%spark.pyspark\ndata_24h_df \u003d spark.read.options(header\u003dTrue, inferSchema\u003dTrue, multiline\u003dTrue, quote\u003d\u0027\"\u0027, escape\u003d\u0027\"\u0027, encoding\u003d\"UTF-8\").csv(DATA_24h_PATH)\ndata_VNE_df \u003d spark.read.options(header\u003dTrue, inferSchema\u003dTrue, multiline\u003dTrue, quote\u003d\u0027\"\u0027, escape\u003d\u0027\"\u0027, encoding\u003d\"UTF-8\").csv(DATA_VNEXPRESS_PATH)\ndata_VNN_df \u003d spark.read.options(header\u003dTrue, inferSchema\u003dTrue, multiline\u003dTrue, quote\u003d\u0027\"\u0027, escape\u003d\u0027\"\u0027, encoding\u003d\"UTF-8\").csv(DATA_VIETNAMNET_PATH)\n\nprint(\"24h records:\",data_24h_df.count())\nprint(\"VNExpress records:\",data_VNE_df.count())\nprint(\"VietNamNet count:\",data_VNN_df.count())",
       "user": "anonymous",
-      "dateUpdated": "2021-03-29 01:10:03.591",
+      "dateUpdated": "2021-03-29 02:00:51.139",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -155,31 +155,31 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://5d8eb8fbe804:4040/jobs/job?id\u003d0"
+              "jobUrl": "http://0cdc1fb15d27:4040/jobs/job?id\u003d0"
             },
             {
-              "jobUrl": "http://5d8eb8fbe804:4040/jobs/job?id\u003d1"
+              "jobUrl": "http://0cdc1fb15d27:4040/jobs/job?id\u003d1"
             },
             {
-              "jobUrl": "http://5d8eb8fbe804:4040/jobs/job?id\u003d2"
+              "jobUrl": "http://0cdc1fb15d27:4040/jobs/job?id\u003d2"
             },
             {
-              "jobUrl": "http://5d8eb8fbe804:4040/jobs/job?id\u003d3"
+              "jobUrl": "http://0cdc1fb15d27:4040/jobs/job?id\u003d3"
             },
             {
-              "jobUrl": "http://5d8eb8fbe804:4040/jobs/job?id\u003d4"
+              "jobUrl": "http://0cdc1fb15d27:4040/jobs/job?id\u003d4"
             },
             {
-              "jobUrl": "http://5d8eb8fbe804:4040/jobs/job?id\u003d5"
+              "jobUrl": "http://0cdc1fb15d27:4040/jobs/job?id\u003d5"
             },
             {
-              "jobUrl": "http://5d8eb8fbe804:4040/jobs/job?id\u003d6"
+              "jobUrl": "http://0cdc1fb15d27:4040/jobs/job?id\u003d6"
             },
             {
-              "jobUrl": "http://5d8eb8fbe804:4040/jobs/job?id\u003d7"
+              "jobUrl": "http://0cdc1fb15d27:4040/jobs/job?id\u003d7"
             },
             {
-              "jobUrl": "http://5d8eb8fbe804:4040/jobs/job?id\u003d8"
+              "jobUrl": "http://0cdc1fb15d27:4040/jobs/job?id\u003d8"
             }
           ],
           "interpreterSettingId": "spark"
@@ -189,14 +189,14 @@
       "jobName": "paragraph_1616940837927_1678496841",
       "id": "paragraph_1616940837927_1678496841",
       "dateCreated": "2021-03-28 14:13:57.927",
-      "dateStarted": "2021-03-29 01:10:03.651",
-      "dateFinished": "2021-03-29 01:10:28.424",
+      "dateStarted": "2021-03-29 02:00:51.207",
+      "dateFinished": "2021-03-29 02:01:22.620",
       "status": "FINISHED"
     },
     {
       "text": "%spark.pyspark\ndata_24h_df.printSchema()",
       "user": "anonymous",
-      "dateUpdated": "2021-03-29 01:22:29.399",
+      "dateUpdated": "2021-03-29 02:01:25.343",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -219,7 +219,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "root\n |-- headline: string (nullable \u003d true)\n |-- description: string (nullable \u003d true)\n |-- content: string (nullable \u003d true)\n |-- date_published: string (nullable \u003d true)\n |-- category: string (nullable \u003d true)\n |-- \r: string (nullable \u003d true)\n |-- source: string (nullable \u003d false)\n\n"
+            "data": "root\n |-- headline: string (nullable \u003d true)\n |-- description: string (nullable \u003d true)\n |-- content: string (nullable \u003d true)\n |-- date_published: string (nullable \u003d true)\n |-- category: string (nullable \u003d true)\n |-- \r: string (nullable \u003d true)\n\n"
           }
         ]
       },
@@ -229,15 +229,15 @@
       "jobName": "paragraph_1616949598206_1634407199",
       "id": "paragraph_1616949598206_1634407199",
       "dateCreated": "2021-03-28 16:39:58.206",
-      "dateStarted": "2021-03-29 01:22:29.454",
-      "dateFinished": "2021-03-29 01:22:29.692",
+      "dateStarted": "2021-03-29 02:01:25.396",
+      "dateFinished": "2021-03-29 02:01:25.960",
       "status": "FINISHED"
     },
     {
       "title": "Preprocessing: Update source \u0026 Merge",
       "text": "%spark.pyspark\n# init source\ndata_24h_df \u003d data_24h_df.withColumn(\u0027source\u0027, F.lit(\"24h\"))\ndata_VNE_df \u003d data_VNE_df.withColumn(\u0027source\u0027, F.lit(\"VNExpress\"))\ndata_VNN_df \u003d data_VNN_df.withColumn(\u0027source\u0027, F.lit(\"VietNamNet\"))\n\n# Merge\ndata_df \u003d data_VNE_df.union(data_VNN_df).union(data_24h_df)\ndata_df \u003d data_df.drop(\u0027_c5\u0027)\nprint(\"Total records:\",data_df.count())\nz.show(data_df.limit(30))",
       "user": "anonymous",
-      "dateUpdated": "2021-03-29 01:11:09.390",
+      "dateUpdated": "2021-03-29 02:01:28.649",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -315,10 +315,10 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://5d8eb8fbe804:4040/jobs/job?id\u003d9"
+              "jobUrl": "http://0cdc1fb15d27:4040/jobs/job?id\u003d9"
             },
             {
-              "jobUrl": "http://5d8eb8fbe804:4040/jobs/job?id\u003d10"
+              "jobUrl": "http://0cdc1fb15d27:4040/jobs/job?id\u003d10"
             }
           ],
           "interpreterSettingId": "spark"
@@ -328,8 +328,8 @@
       "jobName": "paragraph_1616941199321_2076315153",
       "id": "paragraph_1616941199321_2076315153",
       "dateCreated": "2021-03-28 14:19:59.341",
-      "dateStarted": "2021-03-29 01:10:59.696",
-      "dateFinished": "2021-03-29 01:11:07.966",
+      "dateStarted": "2021-03-29 02:01:28.839",
+      "dateFinished": "2021-03-29 02:01:37.819",
       "status": "FINISHED"
     },
     {
@@ -2083,7 +2083,7 @@
       "title": "Data Explore: When talk about Good Things",
       "text": "%spark.pyspark\nt \u003d (data_df.withColumn(\u0027Good\u0027, F.when( data_df.description.contains(\u0027tình yêu\u0027) \n                                    | data_df.description.contains(\u0027yêu\u0027)\n                                    | data_df.description.contains(\u0027hạnh phúc\u0027)\n                                    | data_df.description.contains(\u0027niềm vui\u0027)\n                                    | data_df.description.contains(\u0027yêu thương\u0027) ,1).otherwise(0)))\nt1 \u003d (t.groupBy(\u0027pub_month\u0027)\n                .agg(F.sum(\"Good\").alias(\"Total\"))\n                .orderBy(\"pub_month\", ascending\u003dFalse))\nprint(t1.count())\nz.show(t1.limit(24))",
       "user": "anonymous",
-      "dateUpdated": "2021-03-29 01:34:37.783",
+      "dateUpdated": "2021-03-29 01:55:26.701",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -2196,9 +2196,125 @@
       "status": "FINISHED"
     },
     {
-      "text": "%spark.pyspark\n",
+      "text": "%spark.pyspark\nGoods \u003d [\u0027yêu\u0027, \u0027yêu thương\u0027, \u0027tình yêu\u0027, \u0027hạnh phúc\u0027, \u0027niềm vui\u0027]\nBads \u003d [\u0027cướp\u0027, \u0027giết\u0027, \u0027hiếp\u0027]\n\n\ndef updateGoodBad(desc):\n    for s in Goods:\n        if s in desc:\n            return \"Good\"\n    for s in Bads:\n        if s in desc:\n            return \"Bad\"\n    return \"Other\"\n\n# register UDF function\nupdateGoodBad_UDF \u003d F.udf(lambda cate: updateGoodBad(cate))\n\n# apply to data\ndata_df \u003d data_df.withColumn(\"GoodOrBad\", updateGoodBad_UDF(data_df.description))",
       "user": "anonymous",
-      "dateUpdated": "2021-03-29 01:32:04.793",
+      "dateUpdated": "2021-03-29 02:01:47.041",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1616981524792_1974060298",
+      "id": "paragraph_1616981524792_1974060298",
+      "dateCreated": "2021-03-29 01:32:04.793",
+      "dateStarted": "2021-03-29 02:01:47.085",
+      "dateFinished": "2021-03-29 02:01:47.961",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.pyspark\ntemp \u003d (data_df.groupBy(\"GoodOrBad\")\n                    .agg(F.count(\"headline\").alias(\"Total\"))\n                    .orderBy(\"Total\", ascending\u003dFalse))\nz.show(temp)",
+      "user": "anonymous",
+      "dateUpdated": "2021-03-29 02:02:18.411",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "pieChart",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "GoodOrBad": "string",
+                      "Total": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "completionKey": "TAB"
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "GoodOrBad\tTotal\nOther\t14774\nGood\t507\nBad\t159\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://0cdc1fb15d27:4040/jobs/job?id\u003d11"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1616982953591_1607962925",
+      "id": "paragraph_1616982953591_1607962925",
+      "dateCreated": "2021-03-29 01:55:53.592",
+      "dateStarted": "2021-03-29 02:01:50.567",
+      "dateFinished": "2021-03-29 02:02:05.963",
+      "status": "FINISHED"
+    },
+    {
+      "user": "anonymous",
       "config": {},
       "settings": {
         "params": {},
@@ -2207,9 +2323,9 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1616981524792_1974060298",
-      "id": "paragraph_1616981524792_1974060298",
-      "dateCreated": "2021-03-29 01:32:04.793",
+      "jobName": "paragraph_1616982659804_1617557450",
+      "id": "paragraph_1616982659804_1617557450",
+      "dateCreated": "2021-03-29 01:50:59.804",
       "status": "READY"
     }
   ],

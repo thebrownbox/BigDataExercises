@@ -8,8 +8,8 @@ def reformatDate(date):
         return "1/1/1970"
     return date
 
-print(reformatDate("12/3/21"))
-print(reformatDate("12/3/2021"))
+# print(reformatDate("12/3/21"))
+# print(reformatDate("12/3/2021"))
 
 News = ['Thời sự','Tin tức trong ngày','TuanVietNam','Thế giới','Special','POLITICS','SOCIETY','FEATURE','Video An ninh','News']
 SucKhoeDoiSong = ['Sức khỏe đời sống','Sức khỏe','Đời sống','Bạn trẻ - Cuộc sống','Tuyến đầu chống dịch','Dịch viêm phổi virus corona','Ẩm thực','Du lịch']
@@ -39,3 +39,21 @@ def updateCategory(cate):
         return "Thời trang"
     else:
         return "Khác"
+
+
+Goods = ['yêu', 'yêu thương', 'tình yêu', 'hạnh phúc', 'niềm vui']
+Bads = ['cướp', 'giết', 'hiếp']
+
+for s in Goods:
+    print(s)
+
+def updateGoodBad(desc):
+    for s in Goods:
+        if s in desc:
+            return "Good"
+    for s in Bads:
+        if s in desc:
+            return "Bad"
+    return "Other"
+
+print(updateCategory("Anh yêu em"))
