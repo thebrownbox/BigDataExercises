@@ -1,5 +1,8 @@
 # BigDataExercises
-
+## Install Zeppelin using docker 
+Make sure you install docker first 
+http://zeppelin.apache.org/download.html
+Using docker: ```docker run -p 8080:8080 --rm --name zeppelin apache/zeppelin:0.9.0```
 ## How to run
 1. To run zeppelin: (Windows PowerShell)
 Run bellow command in the current folder!
